@@ -10,5 +10,9 @@ public class Vertex {
 
     public String toString(){return "("+x+","+y+")";}
 
-    public Double Distance(){return Math.sqrt(x*x + y*y);}
+    public Double distance(){return Math.sqrt(x*x + y*y);}
+
+    public Vertex skalarMult(double s){return new Vertex(x*s, y*s);}
+
+    public void skalarMultMod(double s){this.x=s*x; this.y=s*y;}
 }
