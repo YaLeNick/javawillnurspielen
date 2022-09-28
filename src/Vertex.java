@@ -10,7 +10,7 @@ public class Vertex {
 
     public String toString(){return "("+x+","+y+")";}
 
-    public double distance(Vertex that){
+    public double  distance(Vertex that){
         return(Math.sqrt((that.x - this.x * that.x - this.x)  + (that.y - this.y * that.y - this.y)));
     }
     public double lenght(){return Math.sqrt(x*x + y*y);}
