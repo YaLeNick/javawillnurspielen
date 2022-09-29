@@ -63,8 +63,8 @@ public class GeometricObject {
     }
 
     public boolean contains(GeometricObject that){
-        return that.pos.x >= this.pos.x && that.pos.x <= this.pos.x+width &&
-                that.pos.y >= this.pos.y && that.pos.y <= this.pos.y+height ||
-                ;
+        Vertex newV = new Vertex(this.pos.x - that.width, this.pos.y - that.height);
+        GeometricObject big = new GeometricObject(newV, this.width + that.width, this.height + that.height);
+        return big.contains(that.pos);
     }
 }
