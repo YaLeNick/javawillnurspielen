@@ -1,12 +1,17 @@
+import java.awt.Color;
+
 public class GeometricObject {
     Vertex pos;
     double width;
     double height;
 
+    public Color color;
+
     public GeometricObject(Vertex pos, double width, double height) {
         this.pos = pos;
         this.width = width;
         this.height = height;
+        this.color=color;
 
         if (width < 0) {
             this.width = -width;
@@ -25,8 +30,8 @@ public class GeometricObject {
 
     }
 
-    public GeometricObject(double x, double y, double width, double height) {
-        this(new Vertex(x, y), width, height);
+    public GeometricObject(double x, double y, double width, double height, Color color) {
+        this(new Vertex(x, y), width, height, color.black);
     }
 
     public GeometricObject(double width, double height) {
@@ -95,7 +100,6 @@ public class GeometricObject {
         return false;
     }
 
-    /* Lukas */
     public boolean schneidet(GeometricObject that) {
 
         Vertex newV = new Vertex(this.pos.x - that.width, this.pos.y - that.height);

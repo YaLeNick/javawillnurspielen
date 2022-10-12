@@ -1,5 +1,3 @@
-package util;
-import java.awt.Dimension.*;
 import javax.swing.*;
 import util.ShowInFrame;
 
