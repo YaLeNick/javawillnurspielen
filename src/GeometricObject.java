@@ -7,7 +7,7 @@ public class GeometricObject {
 
     public Color color;
 
-    public GeometricObject(Vertex pos, double width, double height) {
+    public GeometricObject(Vertex pos, double width, double height, Color color) {
         this.pos = pos;
         this.width = width;
         this.height = height;
@@ -29,9 +29,15 @@ public class GeometricObject {
         }
 
     }
+    public GeometricObject(Vertex pos, double width, double height){
+        this(pos, width, height, Color.black);
+    }
 
     public GeometricObject(double x, double y, double width, double height, Color color) {
-        this(new Vertex(x, y), width, height, color.black);
+        this(new Vertex(x, y), width, height, color);
+    }
+    public GeometricObject(double x, double y, double width, double height) {
+        this(x, y, width, height, Color.black);
     }
 
     public GeometricObject(double width, double height) {
