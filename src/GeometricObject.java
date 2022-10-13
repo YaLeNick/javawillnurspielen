@@ -29,13 +29,14 @@ public class GeometricObject {
         }
 
     }
-    public GeometricObject(Vertex pos, double width, double height){
-        this(pos, width, height, Color.black);
-    }
 
     public GeometricObject(double x, double y, double width, double height, Color color) {
         this(new Vertex(x, y), width, height, color);
     }
+    public GeometricObject(Vertex pos, double width, double height) {
+        this(pos, width, height, Color.black);
+    }
+
     public GeometricObject(double x, double y, double width, double height) {
         this(x, y, width, height, Color.black);
     }
@@ -106,12 +107,12 @@ public class GeometricObject {
         return false;
     }
 
-    public boolean schneidet(GeometricObject that) {
+/*    public boolean schneidet(GeometricObject that) {
 
         Vertex newV = new Vertex(this.pos.x - that.width, this.pos.y - that.height);
         GeometricObject big = new GeometricObject(newV, this.width + that.width, this.height + that.height);
         return big.contains(that.pos);
 
     }
-
+*/
 }
