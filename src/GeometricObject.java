@@ -29,6 +29,9 @@ public class GeometricObject {
         }
 
     }
+    public GeometricObject(Vertex v){
+        this(v,0,0,Color.black);
+    }
 
     public GeometricObject(double x, double y, double width, double height, Color color) {
         this(new Vertex(x, y), width, height, color);

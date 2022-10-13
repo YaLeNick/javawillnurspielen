@@ -1,3 +1,4 @@
+
 import util.ShowInFrame;
 import javax.swing.JPanel;
 
@@ -12,7 +13,7 @@ public class PaintableImage extends JPanel implements Paintable{
     }
 
     public static void main(String[]args){
-        PaintableImage pi=new PaintableImage("frog.jpg");
+        PaintableImage pi=new PaintableImage("image/Trump.jpg");
         ShowInFrame.show(new PaintablePanel(pi));
     }
 }

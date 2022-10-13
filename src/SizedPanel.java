@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SizedPanel extends JPanel {
-    int preferredWidth = 400;
-    int preferredHeight = 300;
+    int preferredWidth = 1000;
+    int preferredHeight = 800;
 
     public SizedPanel(int w, int h) {
         this.preferredWidth = w;
